@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="checkbox"] {
+        width: auto;
+        margin-right: 8px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .checkbox-group {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+      <h2>Student Registration & Onboarding</h2>
+
+      <!-- Name Field -->
+      <label for="name">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        required
+      />
+
+      <!-- Gender Dropdown -->
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+        <option value="prefer-not-to-say">Prefer not to say</option>
+      </select>
+
+      <!-- Age Field -->
+      <label for="age">Age</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        placeholder="Enter your age"
+        required
+      />
+
+      <!-- Highest Academic Certificate Dropdown -->
+      <label for="certificate">Highest Academic Certificate</label>
+      <select id="certificate" name="certificate" required>
+        <option value="">Select your highest academic qualification</option>
+        <option value="high-school">High School Certificate</option>
+        <option value="college-diploma">College Diploma</option>
+        <option value="vocational-training">
+          Vocational Training Institute Certificate
+        </option>
+        <option value="university-degree">University Degree</option>
+      </select>
+
+      <!-- Email Field -->
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+
+      <!-- Phone Field -->
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+        required
+      />
+
+      <!-- Religion (Checkbox) -->
+      <label>Religion (Select one or more):</label>
+      <div class="checkbox-group">
+        <label
+          ><input type="checkbox" name="religion" value="christianity" />
+          Christianity</label
+        >
+        <label
+          ><input type="checkbox" name="religion" value="islam" /> Islam</label
+        >
+        <label
+          ><input type="checkbox" name="religion" value="hinduism" />
+          Hinduism</label
+        >
+        <label
+          ><input type="checkbox" name="religion" value="atheism" />
+          Atheism</label
+        >
+        <label
+          ><input type="checkbox" name="religion" value="other" /> Other</label
+        >
+      </div>
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
